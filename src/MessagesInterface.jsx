@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "./MessagesInterface.css";
 
@@ -23,7 +23,7 @@ const MessagesInterface = () => {
 
   return (
     <div className="messages-container">
-      {messages.map((message: any) => (
+      {messages.map((message) => (
         <div
           key={message.id}
           className={`message ${message.bot_sender ? "bot" : "user"}`}
